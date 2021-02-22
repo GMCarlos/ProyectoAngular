@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel="stylesheet" href="css/estilos1.css">
+</head>
+<body>
+ <div class="contenedor-form">
+ 
+   <form data-ng-submit="headerVM.functions.headerHandlerSwitcher()" >
+        
+        <div class="formulario">
+        <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            <h2>Datos Cuenta</h2>
+            
+            <form >
+                Usuario<input type="text" placeholder="Usuario" name="usuario"  data-ng-model="headerVM.user.username" required>
+                Email<input type="email" placeholder="Correo Electronico" name="email"  data-ng-model="headerVM.user.email" required>
+                Contrasena<input type="password" placeholder="Password" name="contrasena"  data-ng-model="headerVM.user.password" required>  
+                
+                <input id="button" type="submit" value="Editar Perfil" 
+        	data-ng-show="headerVM.functions.where('/editUser')"/>
+        	<input id="button" type="submit" value="Eliminar usuario" 
+        	data-ng-show="headerVM.functions.where('/deleteUser')"/>
+      	
+      	
+            </form>
+        </div>
+        
+  </form>      
+        
+        
+    </div>
+</body>
+</html>

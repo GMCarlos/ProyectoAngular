@@ -1,0 +1,41 @@
+
+		<h2> List of chollos:</h2>
+
+		
+	<table>
+		<thead>
+			<tr>
+				
+				<th>Titulo</th>
+				<th>Descripcion</th>
+				<th>Link</th>
+				<th>Precio</th>
+				<th>Likes</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+				<th>Disponible/Agotado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="chollos" data-ng-repeat="chollo in listVM.mischollos"> 
+				<td>{{ chollo.title }}</td>
+				<td>{{ chollo.description }}</td>
+	    		<td>{{ chollo.link }}</td>
+				<td>{{ chollo.price }}</td>
+				<td>{{ chollo.likes }}</td>
+				<td class="icono">
+					<a data-ng-href="#!/editChollo/{{ chollo.id }}" >
+						<img data-ng-src="../img/edit.png" alt="editar" width="40px"/>
+					 </a>
+				 </td>
+				<td class="icono">
+					<a data-ng-href="#!/deleteChollo/{{ chollo.id }}" >
+						<img data-ng-src="../img/delete.png" alt="eliminar" width="40px"/>
+					 </a>
+				 </td>
+				<td>{{ chollo.soldout }}</td>
+				
+    		</tr>
+		</tbody>	
+	</table>
+		    
